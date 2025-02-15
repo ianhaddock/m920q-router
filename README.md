@@ -1,9 +1,9 @@
-# OPNsense m920q Router
+# OPNsense Lenovo m920q Router
 
 I have built two of these so far and have found the price to performance ratio, ease of build, and longevity & strong reuse potential of these systems exciting. Here is how I configure my system for OPNsense use.
 
 
-## Bill of materials:
+## Bill of Materials:
 * Lenovo m920q 1 liter PC ([ebay][5])
 * 8Gb DDR4 2666 SODIMM Ram ([ebay][6])
 * 128Gb or larger 2280 nvme storage ([ebay][7])
@@ -12,22 +12,22 @@ I have built two of these so far and have found the price to performance ratio, 
 * HDMI Dummy Plug ([ebay][12])
 * CR2032 coin cell battery
 * small roll of Kapton tape
-* denatured alcohol
+* isopropyl alcohol
 * fine felt tip permanent pen 
 * nitrile gloves
 * paper towels
 * USB Stick(s) for installer media
 
 
-## Hardware configuration
+## Hardware Configuration
 There are a few steps that can be done now which will ensure a reliable and repeatable base configuration.
 * I recommend you use compressed air in an open space to blow out any dust, dirt, and refuse inside the case first before taking any used gear into your workspace or office.
 * Wipe down the external case with isopropyl alcohol, being careful not to unstick any labels.
 * Pen over any blemishes in the case with permanent marker (a simple step that can make even well used gear look almost new).
 * wipe down the inner walls of the upper and lower case as you proceed.
 
-### Replace the bios coin cell battery
-As these m920q systems are getting old, mine has a build date of 2003, it is sensible to replace the original coin cell bios battery.
+### Replace the BIOS Coin Cell Battery
+As these m920q systems are getting old, mine has a build date of 2003, it is sensible to replace the original coin cell BIOS battery.
 * remove the top cover
 * remove the fan assembly
     - disconnect the speaker cable
@@ -39,8 +39,8 @@ As these m920q systems are getting old, mine has a build date of 2003, it is sen
 * replace the battery.
 Installation is the reverse of removal. I opt not to reinstall the plastic cover for the coin cell, as the retaining glue is often very weak. I found soaking the plastic cover for 5-10 seconds in cleaning alcohol will help regain some of the adhesives stickiness if you would rather keep it attached.
 
-### Factory reset bios
-Fully reset the bios and bios passwords using the JP35 service pins at the rear left (back end, nearest to the wifi antenna port) of the mainboard.
+### Factory Reset BIOS
+Fully reset the BIOS and BIOS passwords using the JP35 service pins at the rear left (back end, nearest to the wifi antenna port) of the mainboard.
 * remove the power cable
 * remove the top case
 * move the jumper on the JP35 pins (6 total pins in two rows of three) to bridge center positions 3 and 4 from the standard position at 1 and 2.
@@ -57,9 +57,9 @@ Onboard speaker will play a service tune and repeat. I let it repeat at least tw
 * reinstall Ram
 * install the lower and top case
 * plug in the power cable and boot system to test
-* press enter or f1 to access bios
+* press enter or f1 to access BIOS
 
-### Install quad port NIC
+### Install Quad Port NIC
 There are 4 port and 2 port variants of the i350 card as well as other options. Do be wary of [possible fake cards][9] with possibly lower quality components.
 
 * On your workbench, unscrew the I350-T4 PCI card bracket and retain the single screw
@@ -78,7 +78,7 @@ There are 4 port and 2 port variants of the i350 card as well as other options. 
 * Screw in the two remaining screws securing the I350-T4 bracket.
 
 
-## BIOS configuration
+## BIOS Configuration
 
 ### Update the BIOS
 
@@ -111,7 +111,7 @@ Adjust settings as appropriate. I set the following:
 
 ## Intel MBEx Remote Management
 
-The benefit to the m920q over the m720q is the onboard remote access.  To retain monitor redirect access when running headless, an HDMI dummy plug needs to be installed. Without one you still have access to power settings and most other features of the MBEx.
+The benefit to the m920q over the m720q is the onboard remote access.  To retain monitor redirect access when running headless, an HDMI dummy plug should be installed. Without one you still have access to power settings and most other features of the MBEx.
 
 * Boot into the BIOS
 * Select Advanced -> Intel Manageability ->
@@ -139,13 +139,15 @@ Confirm your I350-T4 PCI card is recognized.
 * run `devinfo | less` and look for a pci device with 4 NICs listed as igb{0,1,2,3}
 * Continue installation 
 
-As reference, `em0` is the onboard NIC, and the I350-T4 ports are `igb0-1-2-3` in OPNsense. Ports are physically marked A-D inside the port from left to right as you look at the card. I mark my chosen WAN port, the A / igb0 port, with red permanent marker to distinguish it from the rest. 
+As reference, `em0` is the onboard NIC, and the I350-T4 ports are `igb0-1-2-3` in OPNsense. Ports are physically marked A-D inside the port from left to right as you look at the card. 
+
+I mark my chosen WAN port, the A / igb0 port, with red permanent marker to distinguish it from the rest. 
 
 
-## Reference documents
-[User Guide and Hardware Maintenance Manual](./m920q_ughmm_en.pdf) or download [from Lenovo here][1]
-[Specifications Sheet](./ThinkCentre_M920_Tiny_Spec.pdf) or download [from Lenovo here][2]
-[Marketing Datasheet](./ThinkCentre_M920_Tiny_datasheet_EN.pdf) or download [from Lenovo here][3]
+## Reference Documents
+* *[User Guide and Hardware Maintenance Manual](./m920q_ughmm_en.pdf) or download [from Lenovo here][1]
+* [Specifications Sheet](./ThinkCentre_M920_Tiny_Spec.pdf) or download [from Lenovo here][2]
+* [Marketing Datasheet](./ThinkCentre_M920_Tiny_datasheet_EN.pdf) or download [from Lenovo here][3]
 
 [1]: https://download.lenovo.com/pccbbs/thinkcentre_pdf/m920q_ughmm_en.pdf
 [2]: https://psref.lenovo.com/syspool/Sys/PDF/ThinkCentre/ThinkCentre_M920_Tiny/ThinkCentre_M920_Tiny_Spec.PDF
