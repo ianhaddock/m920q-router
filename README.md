@@ -1,6 +1,10 @@
-# OPNsense Lenovo m920q Router
+# M920q Router
 
 I have built two of these so far and have found the price to performance ratio, ease of build, and longevity & strong reuse potential of these systems exciting. Here is how I configure my system for OPNsense use.
+
+<p align="center">
+  <img width="80%" height="auto" src="./pics/m920q.jpg">
+</p>
 
 
 ## Bill of Materials:
@@ -13,7 +17,7 @@ I have built two of these so far and have found the price to performance ratio, 
 * CR2032 coin cell battery
 * small roll of Kapton tape
 * isopropyl alcohol
-* fine felt tip permanent pen 
+* fine felt tip permanent pen, black and red
 * nitrile gloves
 * paper towels
 * USB Stick(s) for installer media
@@ -25,6 +29,10 @@ There are a few steps that can be done now which will ensure a reliable and repe
 * Wipe down the external case with isopropyl alcohol, being careful not to unstick any labels.
 * Pen over any blemishes in the case with permanent marker (a simple step that can make even well used gear look almost new).
 * wipe down the inner walls of the upper and lower case as you proceed.
+
+<p align="center">
+  <img width="80%" height="auto" src="./pics/inside.jpg">
+</p>
 
 ### Replace the BIOS Coin Cell Battery
 As these m920q systems are getting old, mine has a build date of 2003, it is sensible to replace the original coin cell BIOS battery.
@@ -109,7 +117,7 @@ Adjust settings as appropriate. I set the following:
 * Save setting and restart
 
 
-## Intel MBEx Remote Management
+## Intel vPro MBEx Remote Management
 
 The benefit to the m920q over the m720q is the remote access & management available when connecting via the onboard NIC.  
 
@@ -131,6 +139,12 @@ On reboot press Ctrl-P to enter Intel Remote Management
 * Activate Network Access
 * Save and exit
 
+
+## Burn-in Testing
+
+I recommend running [Prime95][13] and [memtest86][14] tests to stress test the CPU, active cooling, and memory systems before installing and configuring as a router.
+
+
 ## OPNsense Installation
 
 Download the [latest version of OPNsense][11] and burn to a USB stick for installation. 
@@ -144,6 +158,18 @@ Confirm your I350-T4 PCI card is recognized.
 As reference, `em0` is the onboard NIC, and the I350-T4 ports are `igb0-1-2-3` in OPNsense. Ports are physically marked A-D inside the port from left to right as you look at the card. 
 
 I mark my chosen WAN port, the A / igb0 port, with red permanent marker to distinguish it from the rest. 
+
+<p align="center">
+  <img width="80%" height="auto" src="./pics/ports.jpg">
+</p>
+
+## Online Resources
+* Reddit
+	- [r/lenovo][15]
+	- [r/opnsense][16]
+* ServeTheHome.com
+	- [m920q Review][17]
+	- [Lenovo Tiny series Reference Thread][18]
 
 
 ## Reference Documents
@@ -163,5 +189,9 @@ I mark my chosen WAN port, the A / igb0 port, with red permanent marker to disti
 [10]: https://support.lenovo.com/us/en/downloads/ds503907-flash-bios-update-thinkcentre-m720t-m720s-m720q-m920t-m920s-m920q-m920x-thinkstation-p330-tiny
 [11]: https://opnsense.org/
 [12]: https://www.ebay.com/sch/i.html?_nkw=hdmi+dummy+plug+1080p
-
-
+[13]: https://www.mersenne.org
+[14]: https://www.memtest86.com/memtest86.html
+[15]: https://www.reddit.com/r/Lenovo/search/?q=m920q
+[16]: https://www.reddit.com/r/opnsense/search/?q=m920q
+[17]: https://www.servethehome.com/lenovo-thinkcentre-m920-and-m920q-tiny-guide-and-review/
+[18]: https://forums.servethehome.com/index.php?threads/lenovo-thinkcentre-thinkstation-tiny-project-tinyminimicro-reference-thread.34925/
