@@ -76,6 +76,11 @@ There are 4 port and 2 port variants of the i350 card as well as other options. 
     - Some risers contain PCI release tabs that require the WiFi card be removed to fit. 
     - You can modify the riser card by removing part or all of the PCI release tab as I do, or remove the WiFi card instead.
     - The OEM WiFi card is not compatible with OPNsense and removing it can save you around a watt at idle.
+
+<p align="center">
+  <img width="80%" height="auto" src="./pics/riser.jpg">
+</p>
+
 * Remove the top chassis cover
 * Remove the SATA 2.5" drive adapter and cable 
 	- the cable uses a flip up, zero force style connector
