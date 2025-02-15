@@ -111,7 +111,9 @@ Adjust settings as appropriate. I set the following:
 
 ## Intel MBEx Remote Management
 
-The benefit to the m920q over the m720q is the onboard remote access.  To retain monitor redirect access when running headless, an HDMI dummy plug should be installed. Without one you still have access to power settings and most other features of the MBEx.
+The benefit to the m920q over the m720q is the remote access & management available when connecting via the onboard NIC.  
+
+To retain monitor redirect when running headless, a HDMI dummy plug should be installed. Without one you will still have access to the rest of the MBEx features including remote power settings.
 
 * Boot into the BIOS
 * Select Advanced -> Intel Manageability ->
@@ -145,9 +147,9 @@ I mark my chosen WAN port, the A / igb0 port, with red permanent marker to disti
 
 
 ## Reference Documents
-* *[User Guide and Hardware Maintenance Manual](./m920q_ughmm_en.pdf) or download [from Lenovo here][1]
-* [Specifications Sheet](./ThinkCentre_M920_Tiny_Spec.pdf) or download [from Lenovo here][2]
-* [Marketing Datasheet](./ThinkCentre_M920_Tiny_datasheet_EN.pdf) or download [from Lenovo here][3]
+* [User Guide and Hardware Maintenance Manual](./m920q_ughmm_en.pdf) or [download from Lenovo][1]
+* [Specifications Sheet](./ThinkCentre_M920_Tiny_Spec.pdf) or [download from Lenovo][2]
+* [Marketing Datasheet](./ThinkCentre_M920_Tiny_datasheet_EN.pdf) or [download from Lenovo][3]
 
 [1]: https://download.lenovo.com/pccbbs/thinkcentre_pdf/m920q_ughmm_en.pdf
 [2]: https://psref.lenovo.com/syspool/Sys/PDF/ThinkCentre/ThinkCentre_M920_Tiny/ThinkCentre_M920_Tiny_Spec.PDF
