@@ -193,6 +193,11 @@ I mark my chosen WAN port, the A / igb0 port, with red permanent marker to disti
 * [Specifications Sheet](./ThinkCentre_M920_Tiny_Spec.pdf) or [download from Lenovo][2]
 * [Marketing Datasheet](./ThinkCentre_M920_Tiny_datasheet_EN.pdf) or [download from Lenovo][3]
 
+## Contributing
+
+If you have suggestions on configuration settings or would like to share a link to your m920q build feel free to drop a pull request.
+
+
 [1]: https://download.lenovo.com/pccbbs/thinkcentre_pdf/m920q_ughmm_en.pdf
 [2]: https://psref.lenovo.com/syspool/Sys/PDF/ThinkCentre/ThinkCentre_M920_Tiny/ThinkCentre_M920_Tiny_Spec.PDF
 [3]: https://psref.lenovo.com/syspool/Sys/PDF/datasheet/ThinkCentre_M920_Tiny_datasheet_EN.pdf
