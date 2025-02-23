@@ -124,13 +124,20 @@ To set a baseline, power on the system and press enter or F1 to access the BIOS.
 * Save settings, restart, and access the BIOS again
 
 Adjust settings as appropriate. I set the following:
+* Main -> System Time & Date -> Set current time & date
+* Devices -> USB Setup -> Bluetooth [Disabled]
+* Devices -> Network setup -> Wireless LAN [Disabled]
 * Advanced -> CPU Setup -> Turbo Mode [Disabled]
 * Power -> After Power Loss [Power On]
-* Setup -> CSM [Enabled]
-* Devices -> Network setup -> Wireless LAN [Disabled]
-* Main -> System Time & Date -> Set current time & date
-* Save setting and restart
+* Security -> Computrace -> Current Setting [Disabled]
+* Startup -> CSM [Enabled]
 
+If you plan on media transcoding with the IGP:
+* Devices -> Select Active Video [IDG]
+* Devices -> Pre-Allocated Memory Size [1024MB]
+* Devices -> Total Graphics Memory [Maximum]
+
+* Save setting and restart
 
 ## Intel vPro MBEx Remote Management
 
