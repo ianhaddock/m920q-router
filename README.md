@@ -137,7 +137,8 @@ If you plan on media transcoding with the IGP:
 * Devices -> Pre-Allocated Memory Size [1024MB]
 * Devices -> Total Graphics Memory [Maximum]
 
-* Save setting and restart
+Save setting and restart
+
 
 ## Intel vPro MBEx Remote Management
 
